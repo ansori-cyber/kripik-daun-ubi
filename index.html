@@ -1,16 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Kripik Daun Ubi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANSORI GROUP</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* NAVBAR */
+nav {
+  background: #111;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 35px;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
+
+/* CARD PRODUK */
+.card {
+  background: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+
 </head>
 <body>
-  <h1>Kripik Daun Ubi</h1>
-  <p>Camilan renyah dan enak buatan sendiri.</p>
 
-  <h2>Produk</h2>
-  <p>Kripik daun ubi rasa original dan balado</p>
+<!-- NAVBAR -->
+<nav>
+  <div><b>ANSORI GROUP</b></div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#produk">Produk</a>
+  </div>
+</nav>
 
-  <h2>Kontak</h2>
-  <p>WhatsApp: 085768495689</p>
+<!-- HOME -->
+<section id="home" class="hero">
+  <h1>ANSORI GROUP</h1>
+  <p>Camilan Renyah, Lezat, dan Terpercaya</p>
+  <p>Kami menghadirkan kripik daun ubi dengan kualitas terbaik, rasa premium, dan harga terjangkau.</p>
+  <a class="btn" href="https://wa.me/6285768495689">Order Sekarang</a>
+</section>
+
+<!-- PRODUK -->
+<section id="produk" class="container">
+  <h2>Produk Kami</h2>
+
+  <div class="card">
+    <img src="produk1.jpg">
+    <h3>Kripik Daun Ubi Balado</h3>
+    <p>Rasa pedas gurih yang bikin nagih</p>
+    <p><b>Rp 5.000</b></p>
+    <a class="btn" href="https://wa.me/6285768495689">Pesan</a>
+  </div>
+
+  <div class="card">
+    <img src="produk2.jpg">
+    <h3>Kripik Jagung Manis</h3>
+    <p>Manis gurih dengan cita rasa khas</p>
+    <p><b>Rp 5.000</b></p>
+    <a class="btn" href="https://wa.me/6285768495689">Pesan</a>
+  </div>
+
+  <div class="card">
+    <img src="produk3.jpg">
+    <h3>Kripik Barbeque</h3>
+    <p>Aroma smoky dengan rasa premium</p>
+    <p><b>Rp 5.000</b></p>
+    <a class="btn" href="https://wa.me/6285768495689">Pesan</a>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><b>ANSORI GROUP</b></p>
+  <p>📍 Bandar Lampung</p>
+  <p>🕒 09.00 - 17.00 (Setiap Hari)</p>
+  <p>📱 085768495689</p>
+</footer>
+
 </body>
-</html>
+  </html>
