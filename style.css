@@ -408,3 +408,14 @@ border:1px solid #8ee4a8;
     color:#c40000;
 }
 }
+.testimoni{
+    padding:10px;
+}
+
+.testimoni img{
+    width:92%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:20px;
+}
