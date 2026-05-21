@@ -150,10 +150,12 @@ header{
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
+.card img {
+    width: 100%;
+    height: auto;  /* atau pakai 260px untuk semua sama tinggi */
+    object-fit: contain;
+    background: #fff; /* opsional, untuk memberi background putih */
+}
 }
 
 .card-body{
