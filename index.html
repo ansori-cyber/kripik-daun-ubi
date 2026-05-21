@@ -1,693 +1,308 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ANSORI GROUP | Sweet Potato Chips Premium</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+  <title>ANSORI GROUP</title>
 
-    body{
-      background:#f5f5f5;
-      color:#222;
-      padding-bottom:90px;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    header{
-      background:white;
-      padding:15px;
-      position:sticky;
-      top:0;
-      z-index:999;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    .topbar{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .logo{
-      color:#16a34a;
-      font-weight:bold;
-      font-size:22px;
-    }
-
-    .search{
-      flex:1;
-    }
-
-    .search input{
-      width:100%;
-      padding:12px;
-      border-radius:30px;
-      border:none;
-      background:#f0f0f0;
-      outline:none;
-    }
-
-    .cart-btn{
-      background:#16a34a;
-      color:white;
-      border:none;
-      width:45px;
-      height:45px;
-      border-radius:50%;
-      font-size:20px;
-      cursor:pointer;
-    }
-
-    .hero{
-      margin:15px;
-      background:linear-gradient(135deg,#16a34a,#22c55e);
-      color:white;
-      padding:30px 20px;
-      border-radius:20px;
-    }
-
-    .discount{
-      display:inline-block;
-      background:orange;
-      color:white;
-      padding:5px 10px;
-      border-radius:20px;
-      font-size:12px;
-      margin-bottom:15px;
-    }
-
-    .hero h1{
-      font-size:34px;
-      margin-bottom:10px;
-    }
-
-    .hero p{
-      line-height:1.6;
-      margin-bottom:20px;
-    }
-
-    .btn{
-      background:white;
-      color:#16a34a;
-      padding:12px 20px;
-      border-radius:30px;
-      display:inline-block;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      transform:scale(1.05);
-    }
-
-    .category{
-      display:flex;
-      overflow:auto;
-      gap:10px;
-      padding:0 15px 10px;
-    }
-
-    .category button{
-      border:none;
-      padding:10px 15px;
-      border-radius:30px;
-      background:white;
-      cursor:pointer;
-      white-space:nowrap;
-      font-weight:bold;
-    }
-
-    .category .active{
-      background:#16a34a;
-      color:white;
-    }
-
-    section{
-      padding:15px;
-    }
-
-    .section-title{
-      font-size:28px;
-      margin-bottom:20px;
-      font-weight:bold;
-    }
-
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:15px;
-    }
-
-    .card{
-      background:white;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-5px);
-    }
-
-    .card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-    }
-
-    .card-content{
-      padding:15px;
-    }
-
-    .label{
-      display:inline-block;
-      padding:5px 10px;
-      border-radius:20px;
-      font-size:11px;
-      color:white;
-      margin-bottom:10px;
-      font-weight:bold;
-    }
-
-    .best{
-      background:red;
-    }
-
-    .new{
-      background:orange;
-    }
-
-    .fav{
-      background:#ec4899;
-    }
-
-    .premium{
-      background:#7c3aed;
-    }
-
-    .old-price{
-      color:red;
-      text-decoration:line-through;
-      font-size:14px;
-      margin-top:10px;
-    }
-
-    .price{
-      color:#111;
-      font-size:26px;
-      font-weight:bold;
-      margin:5px 0;
-    }
-
-    .desc{
-      color:#666;
-      font-size:14px;
-      line-height:1.5;
-      margin:10px 0;
-    }
-
-    .buy-btn{
-      display:block;
-      text-align:center;
-      background:#16a34a;
-      color:white;
-      padding:12px;
-      border-radius:12px;
-      margin-top:15px;
-      font-weight:bold;
-    }
-
-    .why{
-      background:white;
-      border-radius:20px;
-      padding:20px;
-      line-height:2;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .testimonials{
-      display:grid;
-      gap:15px;
-    }
-
-    .testi{
-      background:white;
-      border-radius:20px;
-      padding:20px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .stars{
-      color:gold;
-      font-size:20px;
-      margin-bottom:10px;
-    }
-
-    footer{
-      background:#111;
-      color:white;
-      text-align:center;
-      padding:40px 20px;
-      margin-top:30px;
-    }
-
-    .footer-icons{
-      margin-top:15px;
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      font-size:25px;
-    }
-
-    .bottom-nav{
-      position:fixed;
-      bottom:0;
-      left:0;
-      width:100%;
-      background:white;
-      display:flex;
-      justify-content:space-around;
-      padding:12px 0;
-      box-shadow:0 -2px 10px rgba(0,0,0,0.1);
-      z-index:999;
-    }
-
-    .nav-item{
-      text-align:center;
-      cursor:pointer;
-      color:#444;
-      font-size:14px;
-    }
-
-    .nav-item.active{
-      color:#16a34a;
-      font-weight:bold;
-    }
-
-    .wa-float{
-      position:fixed;
-      bottom:80px;
-      right:20px;
-      width:60px;
-      height:60px;
-      background:#25d366;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      font-size:30px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.2);
-      z-index:999;
-    }
-
-    .hidden{
-      display:none;
-    }
-
-    @media(max-width:600px){
-      .hero h1{
-        font-size:28px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <div class="topbar">
-    <div class="logo">ANSORI GROUP</div>
 
-    <div class="search">
-      <input type="text" placeholder="Cari produk..." id="searchInput">
-    </div>
-
-    <button class="cart-btn" onclick="openCart()">🛒</button>
+  <div class="logo">
+    ANSORI GROUP
   </div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Cari produk...">
+  </div>
+
+  <button class="cart-btn" onclick="openCart()">
+    🛒
+  </button>
+
 </header>
 
-<!-- HOME -->
-<div id="homePage">
+<!-- HERO -->
+<section class="hero">
 
-  <div class="hero">
-    <div class="discount">DISKON HINGGA 35%</div>
+  <span class="discount">
+    DISKON 35%
+  </span>
 
-    <h1>Sweet Potato Chips Premium</h1>
+  <h1>Sweet Potato Chips Premium</h1>
 
-    <p>
-      Keripik ubi premium modern dengan tekstur super renyah,
-      bumbu melimpah, higienis, fresh setiap hari,
-      dan sudah dipercaya banyak pelanggan di Indonesia 🔥
-    </p>
+  <p>
+    Keripik premium modern dengan rasa kekinian,
+    higienis, renyah, dan sudah dipercaya pelanggan.
+  </p>
 
-    <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20pesan%20keripik"
-      class="btn">Pesan Sekarang</a>
+  <a href="https://wa.me/6281234567890" class="hero-btn">
+    Pesan Sekarang
+  </a>
+
+</section>
+
+<!-- KATEGORI -->
+<div class="categories">
+
+  <button class="active">
+    🔥 Semua
+  </button>
+
+  <button>
+    🌶 Pedas
+  </button>
+
+  <button>
+    🌽 Jagung
+  </button>
+
+  <button>
+    🌿 Rumput Laut
+  </button>
+
+  <button>
+    🍖 Barbeque
+  </button>
+
+</div>
+
+<!-- PRODUK -->
+<section class="produk-section">
+
+  <h2>Produk Kami</h2>
+
+  <div class="produk-container">
+
+    <!-- PRODUK 1 -->
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-body">
+
+        <span class="label best">
+          BEST SELLER
+        </span>
+
+        <h3>PEDAS BALADO 🔥</h3>
+
+        <div class="old-price">
+          Rp 6.500
+        </div>
+
+        <div class="price">
+          Rp 5.000
+        </div>
+
+        <p>
+          Pedas gurih premium dengan bumbu melimpah
+          dan rasa bikin nagih.
+        </p>
+
+        <button onclick="pesanProduk('PEDAS BALADO')">
+          Pesan Sekarang
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUK 2 -->
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-body">
+
+        <span class="label new">
+          NEW FAVORIT
+        </span>
+
+        <h3>JAGUNG MANIS 🌽</h3>
+
+        <div class="old-price">
+          Rp 6.500
+        </div>
+
+        <div class="price">
+          Rp 4.800
+        </div>
+
+        <p>
+          Rasa manis gurih premium yang cocok
+          untuk semua umur.
+        </p>
+
+        <button onclick="pesanProduk('JAGUNG MANIS')">
+          Pesan Sekarang
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUK 3 -->
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-body">
+
+        <span class="label fav">
+          FAVORIT
+        </span>
+
+        <h3>RUMPUT LAUT 🌿</h3>
+
+        <div class="old-price">
+          Rp 6.500
+        </div>
+
+        <div class="price">
+          Rp 5.200
+        </div>
+
+        <p>
+          Aroma rumput laut premium dengan rasa modern
+          dan renyah maksimal.
+        </p>
+
+        <button onclick="pesanProduk('RUMPUT LAUT')">
+          Pesan Sekarang
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUK 4 -->
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-body">
+
+        <span class="label premium">
+          PREMIUM
+        </span>
+
+        <h3>BARBEQUE 🍖</h3>
+
+        <div class="old-price">
+          Rp 6.500
+        </div>
+
+        <div class="price">
+          Rp 5.500
+        </div>
+
+        <p>
+          Sensasi barbeque smoky premium
+          dengan kualitas terbaik.
+        </p>
+
+        <button onclick="pesanProduk('BARBEQUE')">
+          Pesan Sekarang
+        </button>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="category">
-    <button class="active">🔥 Semua</button>
-    <button>🌶 Pedas</button>
-    <button>🌽 Jagung</button>
-    <button>🌿 Rumput Laut</button>
-    <button>🍖 Barbeque</button>
+</section>
+
+<!-- KENAPA PILIH -->
+<section class="why">
+
+  <h2>Kenapa Pilih ANSORI GROUP?</h2>
+
+  <ul>
+    <li>✅ Diproduksi higienis dan fresh setiap hari</li>
+    <li>✅ Bahan premium berkualitas</li>
+    <li>✅ Renyah dan tidak alot</li>
+    <li>✅ Sudah dipercaya pelanggan</li>
+    <li>✅ Cocok untuk santai dan keluarga</li>
+  </ul>
+
+</section>
+
+<!-- TESTIMONI -->
+<section class="testimoni">
+
+  <h2>Testimoni Pelanggan</h2>
+
+  <div class="testi-card">
+    ⭐⭐⭐⭐⭐ <br><br>
+    “Keripiknya enak banget dan bumbunya melimpah!”
+    <br><br>
+    <b>- Andi Saputra</b>
   </div>
 
-  <section>
-    <div class="section-title">Produk Kami</div>
+  <div class="testi-card">
+    ⭐⭐⭐⭐⭐ <br><br>
+    “Website modern dan gampang order langsung WA.”
+    <br><br>
+    <b>- Siti Rahma</b>
+  </div>
 
-    <div class="products" id="productContainer">
+</section>
 
-      <!-- PRODUCT 1 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <div class="label best">BEST SELLER</div>
-
-          <h3>PEDAS BALADO 🔥</h3>
-
-          <div class="old-price">Rp 6.500</div>
-          <div class="price">Rp 5.000</div>
-
-          <div class="desc">
-            Rasa pedas gurih yang bikin nagih.
-            Favorit pelanggan dengan bumbu melimpah dan renyah maksimal.
-          </div>
-
-          <a class="buy-btn"
-            href="https://wa.me/6281234567890?text=Saya%20ingin%20pesan%20PEDAS%20BALADO">
-            Pesan Sekarang
-          </a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 2 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <div class="label new">NEW FAVORIT</div>
-
-          <h3>JAGUNG MANIS 🌽</h3>
-
-          <div class="old-price">Rp 6.500</div>
-          <div class="price">Rp 4.800</div>
-
-          <div class="desc">
-            Perpaduan manis gurih premium yang cocok untuk semua umur.
-            Fresh diproduksi setiap hari.
-          </div>
-
-          <a class="buy-btn"
-            href="https://wa.me/6281234567890?text=Saya%20ingin%20pesan%20JAGUNG%20MANIS">
-            Pesan Sekarang
-          </a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 3 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <div class="label fav">FAVORIT CUSTOMER</div>
-
-          <h3>RUMPUT LAUT 🌿</h3>
-
-          <div class="old-price">Rp 6.500</div>
-          <div class="price">Rp 5.200</div>
-
-          <div class="desc">
-            Aroma rumput laut premium dengan rasa modern,
-            ringan, gurih, dan bikin ketagihan.
-          </div>
-
-          <a class="buy-btn"
-            href="https://wa.me/6281234567890?text=Saya%20ingin%20pesan%20RUMPUT%20LAUT">
-            Pesan Sekarang
-          </a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 4 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <div class="label premium">PREMIUM</div>
-
-          <h3>BARBEQUE 🍖</h3>
-
-          <div class="old-price">Rp 6.500</div>
-          <div class="price">Rp 5.500</div>
-
-          <div class="desc">
-            Sensasi barbeque smoky modern dengan kualitas premium
-            dan bumbu meresap sempurna.
-          </div>
-
-          <a class="buy-btn"
-            href="https://wa.me/6281234567890?text=Saya%20ingin%20pesan%20BARBEQUE">
-            Pesan Sekarang
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">Kenapa Pilih ANSORI GROUP?</div>
-
-    <div class="why">
-      ✅ Diproduksi higienis dan fresh setiap hari <br>
-      ✅ Menggunakan bahan premium berkualitas <br>
-      ✅ Tekstur renyah dan tidak alot <br>
-      ✅ Packing rapi dan aman <br>
-      ✅ Sudah dipercaya banyak pelanggan <br>
-      ✅ Cocok untuk santai, belajar, dan kumpul keluarga <br>
-      ✅ Rasa modern kekinian favorit anak muda
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">Testimoni Pelanggan</div>
-
-    <div class="testimonials">
-
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        “Keripiknya renyah banget dan bumbunya meresap.
-        Packing rapi dan kualitasnya premium!”
-        <br><br>
-        <b>- Andi Saputra</b>
-      </div>
-
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        “Barbeque nya enak parah 😍
-        Sudah order berkali-kali dan selalu fresh.”
-        <br><br>
-        <b>- Siti Rahma</b>
-      </div>
-
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        “Website modern, pemesanan gampang langsung WA.
-        Recommended banget!”
-        <br><br>
-        <b>- Fajar Hidayat</b>
-      </div>
-
-    </div>
-  </section>
-
-</div>
-
-<!-- PROMO -->
-<div id="promoPage" class="hidden">
-  <section>
-    <div class="section-title">Promo Hari Ini 🎉</div>
-
-    <div class="why">
-      🔥 Beli 3 Gratis 1 <br>
-      🔥 Diskon hingga 35% <br>
-      🔥 Gratis ongkir area tertentu <br>
-      🔥 Bonus stiker untuk pembelian banyak <br><br>
-
-      <a href="https://wa.me/6281234567890?text=Saya%20ingin%20klaim%20promo"
-        class="buy-btn">
-        Klaim Promo Sekarang
-      </a>
-    </div>
-  </section>
-</div>
-
-<!-- CART -->
-<div id="cartPage" class="hidden">
-  <section>
-    <div class="section-title">Keranjang Belanja 🛒</div>
-
-    <div class="why">
-      <p>Produk favorit Anda akan muncul di sini.</p>
-      <br>
-
-      <a href="https://wa.me/6281234567890?text=Saya%20ingin%20checkout"
-        class="buy-btn">
-        Checkout via WhatsApp
-      </a>
-    </div>
-  </section>
-</div>
-
-<!-- CHAT -->
-<div id="chatPage" class="hidden">
-  <section>
-    <div class="section-title">Customer Service 💬</div>
-
-    <div class="why">
-      Chat admin langsung untuk order dan tanya produk.
-      <br><br>
-
-      <a href="https://wa.me/6281234567890"
-        class="buy-btn">
-        Chat WhatsApp
-      </a>
-    </div>
-  </section>
-</div>
-
+<!-- FOOTER -->
 <footer>
+
   <h2>ANSORI GROUP</h2>
 
-  <p style="margin-top:10px;">
-    Sweet potato chips premium modern,
-    renyah, higienis, dan berkualitas terbaik 🔥
+  <p>
+    Sweet potato chips premium modern dan terpercaya 🔥
   </p>
 
-  <div class="footer-icons">
-    <span>📷</span>
-    <span>🎵</span>
-    <span>💬</span>
-  </div>
+  <br>
 
-  <p style="margin-top:20px;">
+  <p>
     © 2025 ANSORI GROUP
   </p>
+
 </footer>
 
-<!-- FLOATING WA -->
-<a class="wa-float"
-  href="https://wa.me/6281234567890">
-  💬
-</a>
-
-<!-- BOTTOM NAV -->
+<!-- NAVBAR -->
 <div class="bottom-nav">
 
-  <div class="nav-item active" onclick="showPage('homePage', this)">
-    🏠
-    <br>
+  <div class="nav-item active">
+    🏠 <br>
     Home
   </div>
 
-  <div class="nav-item" onclick="showPage('homePage', this)">
-    📦
-    <br>
+  <div class="nav-item">
+    📦 <br>
     Produk
   </div>
 
-  <div class="nav-item" onclick="showPage('promoPage', this)">
-    🎁
-    <br>
+  <div class="nav-item">
+    🎁 <br>
     Promo
   </div>
 
-  <div class="nav-item" onclick="showPage('chatPage', this)">
-    💬
-    <br>
+  <div class="nav-item">
+    💬 <br>
     Chat
   </div>
 
 </div>
 
-<script>
+<!-- FLOATING WA -->
+<a href="https://wa.me/6281234567890" class="wa-float">
+  💬
+</a>
 
-  // FITUR NAVIGASI
-  function showPage(pageId, element){
-
-    document.getElementById('homePage').classList.add('hidden');
-    document.getElementById('promoPage').classList.add('hidden');
-    document.getElementById('cartPage').classList.add('hidden');
-    document.getElementById('chatPage').classList.add('hidden');
-
-    document.getElementById(pageId).classList.remove('hidden');
-
-    let navItems = document.querySelectorAll('.nav-item');
-
-    navItems.forEach(item=>{
-      item.classList.remove('active');
-    });
-
-    element.classList.add('active');
-
-    window.scrollTo({
-      top:0,
-      behavior:'smooth'
-    });
-  }
-
-  // FITUR CART
-  function openCart(){
-
-    document.getElementById('homePage').classList.add('hidden');
-    document.getElementById('promoPage').classList.add('hidden');
-    document.getElementById('chatPage').classList.add('hidden');
-
-    document.getElementById('cartPage').classList.remove('hidden');
-
-    window.scrollTo({
-      top:0,
-      behavior:'smooth'
-    });
-  }
-
-  // SEARCH PRODUK
-  const searchInput = document.getElementById('searchInput');
-
-  searchInput.addEventListener('keyup', function(){
-
-    let filter = searchInput.value.toLowerCase();
-
-    let cards = document.querySelectorAll('.card');
-
-    cards.forEach(card=>{
-
-      let text = card.innerText.toLowerCase();
-
-      if(text.includes(filter)){
-        card.style.display = "block";
-      }else{
-        card.style.display = "none";
-      }
-
-    });
-
-  });
-
-</script>
+<script src="script.js"></script>
 
 </body>
-              </html>
+</html>
