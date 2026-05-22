@@ -201,6 +201,7 @@ header{
 .card p{
   color:#666;
   line-height:1.5;
+  min-height:70px;
 }
 
 .btn-group{
