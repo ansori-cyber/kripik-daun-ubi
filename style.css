@@ -565,3 +565,37 @@ margin-bottom:8px;
 font-size:14px;
 font-weight:bold;
 }
+/* MENU FITUR */
+
+.menu-fitur{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+padding:15px;
+}
+
+.fitur-box{
+background:white;
+padding:15px 10px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.3s;
+}
+
+.fitur-box span{
+font-size:24px;
+display:block;
+margin-bottom:5px;
+}
+
+.fitur-box p{
+font-size:13px;
+font-weight:bold;
+color:#333;
+}
+
+.fitur-box:hover{
+transform:translateY(-3px);
+}
