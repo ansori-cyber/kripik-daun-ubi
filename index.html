@@ -77,29 +77,107 @@
 
 </section>
 
-<!-- KATEGORI -->
+<!-- MENU FITUR -->
+<div class="menu-fitur">
 
-<div class="categories">
+  <div class="fitur-item active" onclick="showSection('beranda')">
+    <span>🏠</span>
+    <p>Beranda</p>
+  </div>
 
-  <button class="active">
-    🔥 Semua
-  </button>
+  <div class="fitur-item" onclick="showSection('pesanan')">
+    <span>📦</span>
+    <p>Pesanan</p>
+  </div>
 
-  <button>
-    🌶 Pedas
-  </button>
+  <div class="fitur-item" onclick="showSection('voucher')">
+    <span>🎫</span>
+    <p>Voucher</p>
+  </div>
 
-  <button>
-    🌽 Jagung
-  </button>
+  <div class="fitur-item" onclick="showSection('bantuan')">
+    <span>❓</span>
+    <p>Bantuan</p>
+  </div>
 
-  <button>
-    🌿 Rumput Laut
-  </button>
+</div>
 
-  <button>
-    🍖 Barbeque
-  </button>
+  <!-- HALAMAN PESANAN -->
+<div id="pesanan" class="menu-page">
+
+  <h2>Pesanan Saya</h2>
+
+  <div class="order-card">
+    <h3>Sweet Potato Chips Pedas Balado</h3>
+    <p>Status: <span class="proses">Sedang Diproses</span></p>
+    <small>Estimasi tiba 2 - 3 hari</small>
+  </div>
+
+  <div class="order-card">
+    <h3>Sweet Potato Chips Rumput Laut</h3>
+    <p>Status: <span class="selesai">Pesanan Selesai</span></p>
+    <small>Pesanan diterima pelanggan</small>
+  </div>
+
+</div>
+
+<!-- HALAMAN VOUCHER -->
+<div id="voucher" class="menu-page">
+
+  <h2>Voucher & Promo</h2>
+
+  <div class="voucher-card">
+    <h3>Diskon 20%</h3>
+    <p>Minimal pembelian Rp 50.000</p>
+  </div>
+
+  <div class="voucher-card">
+    <h3>Gratis Ongkir</h3>
+    <p>Khusus wilayah Bandar Lampung</p>
+  </div>
+
+  <div class="voucher-card">
+    <h3>Promo Member Baru</h3>
+    <p>Potongan Rp 10.000 untuk pesanan pertama</p>
+  </div>
+
+</div>
+
+<!-- HALAMAN BANTUAN -->
+<div id="bantuan" class="menu-page">
+
+  <h2>Pusat Bantuan</h2>
+
+  <div class="help-card">
+    <h3>Cara Memesan</h3>
+    <p>
+      Pilih produk favorit → tekan tombol + Keranjang →
+      buka keranjang → tekan pesan.
+    </p>
+  </div>
+
+  <div class="help-card">
+    <h3>Metode Pembayaran</h3>
+    <p>
+      Pembayaran dapat dilakukan melalui transfer bank
+      atau WhatsApp admin.
+    </p>
+  </div>
+
+  <div class="help-card">
+    <h3>Pengiriman</h3>
+    <p>
+      Produk dikirim setiap hari Senin - Minggu
+      pukul 09.00 - 16.00 WIB.
+    </p>
+  </div>
+
+  <div class="help-card">
+    <h3>Kontak Admin</h3>
+    <p>
+      WhatsApp Anita Dwi untuk bantuan dan informasi lebih lanjut.
+    </p>
+  </div>
 
 </div>
 
